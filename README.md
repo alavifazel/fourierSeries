@@ -5,5 +5,4 @@ Repo contains a small Python program that visualizes the Fourier Series by plott
 * [Scipy](http://www.scipy.org/)
 * [Matplotlib](https://matplotlib.org/)
 
-Demo:
 ![Alt Text](demo.gif)
