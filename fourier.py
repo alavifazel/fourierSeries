@@ -58,6 +58,6 @@ for i in range(0, 500):
 
 for i in range(1, 500, 2):
     plt.plot(x, mapInputs(x,i+1))
-    plt.pause(0.1)
+    plt.pause(0.01)
 
 plt.show()
