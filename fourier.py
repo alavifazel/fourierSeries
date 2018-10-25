@@ -19,7 +19,6 @@ bnArray = []
 def fCos(x, n):
     return f(x)*cos((n*2*pi)/T*x)
 
-
 def fSin(x, n):
     return f(x)*sin((n*2*pi)/T*x)
 
@@ -49,15 +48,19 @@ def fourier(x, n):
 
     return tmp
 
-x = numpy.linspace(-15,15,1000)
+x = numpy.linspace(-15,15,3000)
 
-for i in range(0, 500):
+for i in range(0, 1000):
     anArray.append(an(i))
     bnArray.append(bn(i))
 
+plt.figure(num="Fourier Series Visualization")
 
-for i in range(1, 500, 2):
-    plt.plot(x, mapInputs(x,i+1))
-    plt.pause(0.01)
+for i in range(1, 1000):
+    plt.title("Iteration: " + str(i))
 
+    plt.plot(x, mapInputs(x,2*i + 1), "m")
+
+    plt.pause(0.000001)
+    plt.clf() # Remove this line if you don't want your graph to become empty after each plotting
 plt.show()
